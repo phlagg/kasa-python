@@ -1,0 +1,30 @@
+[project]
+name = "kasa-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Michael Woods", email = "michaelthomaswoods@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "asyncio>=4.0.0",
+    "python-kasa>=0.11.0.1",
+]
+
+[project.scripts]
+kasa-app = "kasa_app.main:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.basedpyright]
+# Turns off all type checking and linting diagnostics
+typeCheckingMode = "basic"
+
+[dependency-groups]
+dev = []
